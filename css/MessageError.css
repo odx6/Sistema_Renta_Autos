@@ -1,0 +1,21 @@
+.form_correct{
+	color:#led12d;
+	opacity: 1;
+}
+
+.form_incorrect{
+	color:#bb2929;
+	opacity: 1;
+	text-align: center;
+	float:center;
+
+}
+.form_incorrect.label{
+	ccolor : #bb2929;
+}
+}.form_incorrect.estado{
+	ccolor : #bb2929;
+}
+.form_incorrect.form_input{
+	ccolor : #bb2929;
+}

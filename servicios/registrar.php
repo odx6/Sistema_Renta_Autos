@@ -9,6 +9,7 @@
 function edad($valor){
     if(strlen($valor)==18){ 
         $birth = intval(substr($valor, 4, 2));
+        if($birth==00)return true;
         $year=date("Y");// EXTRAE EL AÑO ACTUAL
         $year1=date("y");//EXTRAE EL AÑO EN 2 DIGITOS
         $year2=100+$year1;
@@ -51,7 +52,7 @@ if ($result && $result2){
     $count2=mysqli_num_rows($result2);
     if ($count==0 && $count2==0 && filter_var($CORREO, FILTER_VALIDATE_EMAIL) ) {
         
-        if(validate_curp2($DNI) && edad($DNI) ){
+        if(validate_curp2($DNI)){
             //puede crear un nuevo usuario
             $APELLIDO=$_POST['APR'];
             $DIRECCION=$_POST['DIR'];
